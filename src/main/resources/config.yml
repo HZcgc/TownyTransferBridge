@@ -1,0 +1,10 @@
+# This name must exactly match the entry in velocity.toml under [servers].
+target-server: TownyReborn
+
+# Prevent accidental double-click transfers.
+cooldown-milliseconds: 1500
+
+messages:
+  no-permission: '&cYou do not have permission to use this.'
+  player-only: 'This command can only be used by a player.'
+  cooldown: '&cPlease wait before trying again.'
