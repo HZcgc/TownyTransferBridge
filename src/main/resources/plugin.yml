@@ -1,0 +1,16 @@
+name: TownyTransferBridge
+version: ${project.version}
+main: net.townyreborn.transfer.TownyTransferBridgePlugin
+api-version: '26.2'
+author: TownyReborn
+description: Secure Hub-to-SMP transfer command for Towny Reborn NPCs.
+website: https://github.com/HZcgc/TownyTransferBridge
+commands:
+  townytransfer:
+    description: Connect to the Towny Reborn SMP through Velocity.
+    usage: /townytransfer
+    aliases: [joinsmp]
+permissions:
+  townytransfer.use:
+    description: Allows connecting to the configured Towny Reborn backend.
+    default: true
