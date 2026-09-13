@@ -4,7 +4,21 @@ target-server: TownyReborn
 # Prevent accidental double-click transfers.
 cooldown-milliseconds: 1500
 
+# Citizens NPCs listed here are kept invisible permanently.
+# Find an NPC's numeric ID with /npc list or /npc info.
+invisible-npcs:
+  enabled: true
+  ids: []
+
+  # Also hide the Citizens nameplate for managed NPCs.
+  hide-nameplates: true
+
+  # Safety check in ticks. 20 ticks = 1 second. Set to 0 to disable the
+  # repeating check; spawn and chunk-load listeners will still remain active.
+  reapply-interval-ticks: 20
+
 messages:
   no-permission: '&cYou do not have permission to use this.'
   player-only: 'This command can only be used by a player.'
   cooldown: '&cPlease wait before trying again.'
+  reloaded: '&aTownyTransferBridge reloaded. Managing &f{count} &ainvisible Citizens NPC(s).'
