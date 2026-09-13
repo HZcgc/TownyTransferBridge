@@ -5,12 +5,16 @@ api-version: '26.2'
 author: TownyReborn
 description: Secure Hub-to-SMP transfer command for Towny Reborn NPCs.
 website: https://github.com/HZcgc/TownyTransferBridge
+softdepend: [Citizens]
 commands:
   townytransfer:
-    description: Connect to the Towny Reborn SMP through Velocity.
-    usage: /townytransfer
+    description: Connect to Towny Reborn or reload the plugin configuration.
+    usage: /townytransfer [reload]
     aliases: [joinsmp]
 permissions:
   townytransfer.use:
     description: Allows connecting to the configured Towny Reborn backend.
     default: true
+  townytransfer.admin:
+    description: Allows reloading TownyTransferBridge and its invisible NPC list.
+    default: op

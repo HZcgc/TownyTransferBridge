@@ -25,21 +25,21 @@ jobs:
       - name: Upload workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TownyTransferBridge-1.0.0-Paper-26.2
-          path: target/TownyTransferBridge-1.0.0.jar
+          name: TownyTransferBridge-1.1.0-Paper-26.2
+          path: target/TownyTransferBridge-1.1.0.jar
           if-no-files-found: error
           retention-days: 30
       - name: Publish GitHub release
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: v1.0.0
-          JAR: target/TownyTransferBridge-1.0.0.jar
+          TAG: v1.1.0
+          JAR: target/TownyTransferBridge-1.1.0.jar
         run: |
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release upload "$TAG" "$JAR" --clobber
           else
             gh release create "$TAG" "$JAR" \
-              --title "TownyTransferBridge 1.0.0" \
-              --notes "Initial Paper 26.2 release. Adds a secure /townytransfer command for MythicMobs NPCs and transfers the clicking player to the configured Velocity backend."
+              --title "TownyTransferBridge 1.1.0" \
+              --notes "Adds config-driven, persistent invisibility for Citizens NPC IDs, automatic reapplication on spawn/chunk load, and /townytransfer reload."
           fi

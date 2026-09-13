@@ -6,9 +6,9 @@
 
   <groupId>net.townyreborn</groupId>
   <artifactId>TownyTransferBridge</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <name>TownyTransferBridge</name>
-  <description>Secure Paper-to-Velocity transfer command for Towny Reborn NPCs.</description>
+  <description>Secure Paper-to-Velocity transfer command and persistent Citizens NPC invisibility for Towny Reborn.</description>
 
   <properties>
     <maven.compiler.release>25</maven.compiler.release>
